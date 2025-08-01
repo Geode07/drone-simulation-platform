@@ -1,8 +1,10 @@
 # Drone Trace & Mapping Platform
 
-This project generates, visualizes, and stores GPS traces for an autonomous drone using an interactive map, geospatial database, and two backend services. To generate the digital elevation model (DEM), the opentopography api is used. The overpass api is used to generate the geospatial tile context and buildings. 
+This project mimics a drone performing visual inspection over a wildfire in a residential area. It generates, stores, and visualizes GPS traces for an autonomous drone using an two backend services, a timeseries database with geospatial capability, and interactive map. 
 
-In addition to a robust frontend platform, data streaming, and real-time geospatial processing, this project includes my implementation of topography analytics, traveling salesman problem, and pathfinding algorithms for the drone flight.
+To generate the digital elevation model (DEM), the opentopography api is used. The overpass api is used to generate the geospatial tile context and buildings. 
+
+In addition to a Vite frontend platform hosted on Flask, I used FastAPI for data streaming, and multiple python libraries for real-time geospatial processing. I also added my implementations of topography analytics, traveling salesman problem algorithm, and pathfinding algorithm for the drone flight planning task.
 
 ![Screenshot](drone_mapping_screenshot.png)
 
@@ -20,14 +22,7 @@ In addition to a robust frontend platform, data streaming, and real-time geospat
 ## Local Development
 
 ### Project Structure
-├── flask_app/
-├── fastapi_app/
-├── db/
-│ └── init.sql
-├── docker-compose.yml
-├── .env.example
-└── README.md
-
+<pre> ``` ├── flask_app/ ├── fastapi_app/ ├── db/ │ └── init.sql ├── docker-compose.yml ├── .env.example └── README.md ``` </pre>
 
 ### Requirements
 - Docker & Docker Compose
@@ -47,18 +42,13 @@ docker-compose up --build
 * FastAPI docs: http://localhost:8001/docs
 * Postgres DB: localhost:5432 (via any SQL client)
 
-4. Cloud Deployment:
-For production, this architecture is compatible with:
+4. Future Work:
+Cloud Deployment: For production, this architecture is compatible with:
 * Kubernetes: Helm charts or K8s manifests (not included here)
 * Terraform: For provisioning cloud databases, services, and secrets
-
-This approach ensures separation between development and cloud-specific infrastructure.
 
 5. Testing:
 You can use the FastAPI Swagger UI at:
 http://localhost:8001/docs
-
-Screenshots
-
 
 License: MIT
