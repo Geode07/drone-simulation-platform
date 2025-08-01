@@ -22,7 +22,14 @@ In addition to a Vite frontend platform hosted on Flask, I used FastAPI for data
 ## Local Development
 
 ### Project Structure
-<pre> ``` ├── flask_app/ ├── fastapi_app/ ├── db/ │ └── init.sql ├── docker-compose.yml ├── .env.example └── README.md ``` </pre>
+<pre> ```text 
+├── flask_app/ 
+├── fastapi_app/ 
+├── db/ 
+│ └── init.sql 
+├── docker-compose.yml 
+├── .env.example 
+└── README.md ``` </pre>
 
 ### Requirements
 - Docker & Docker Compose
