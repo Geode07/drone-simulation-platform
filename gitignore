@@ -1,0 +1,44 @@
+# Ignore Python cache and virtual environment
+__pycache__/
+*.py[cod]
+*.so
+.env
+*.env
+venv/
+env/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled files and logs
+*.log
+
+# Ignore containers/volumes
+*.pid
+*.sqlite3
+
+# Ignore frontend/dist
+dist/
+build/
+node_modules/
+*.lock
+
+# Ignore Docker-related
+*.img
+*.tar
+*.db
+*.log
+docker-compose.override.yml
+
+# VSCode or IDE
+.vscode/
+.idea/
+
+# Secrets and config
+secrets.*
+*.key
+*.pem
+
+# FastAPI cache
+__pydantic_cache__/

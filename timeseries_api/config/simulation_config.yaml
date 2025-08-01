@@ -1,0 +1,70 @@
+location:
+  lat: 34.077
+  lon: -118.565
+
+locations:
+  palisades:
+    lat: 34.077
+    lon: -118.565
+  palisades_lower: 
+    lat: 34.045327
+    lon: -118.523248
+  palisades_upper:
+    lat: 34.076330
+    lon: -118.561271
+  altadena: 
+    lat: 34.191309
+    lon: -118.131487
+  altadena_west: 
+    lat: 34.186750
+    lon: -118.156188
+
+dem:
+  api_key: ${DEM_API_KEY}
+  resolution: [100, 100]
+  km: 2.0               
+  type: "SRTMGL1"
+  output_file: "input_files/dem.tif"
+
+waypoints:
+  clearance: 30         # Altitude in meters
+
+paths:
+  input_dir: input_files
+  output_dir: output_files
+  flight_plan: "input_files/flight_plan.json"
+
+database:
+  name: "${DB_NAME}"
+  user: "${DB_USER}"
+  password: "${DB_PASSWORD}"
+  host: "${DB_HOST}"
+  port: "${DB_PORT}"
+
+simulation:
+  resolution: [100, 100]
+  dem_km: 2.0
+  dem_type: "SRTMGL1"
+  altitude_clearance: 30
+  dem_output: "input_files/dem.tif"
+  elevation_penalty: 0.01
+
+defaults:
+  drone_id: drone_alpha01
+  interval: 1 second
+
+overpass:
+  api_url: "https://overpass-api.de/api/interpreter"
+  building_levels_height: 3      # meters per level
+  default_building_height: 10.0  # fallback height in meters
+
+drone_simulator:
+  drone_id: drone_alpha01
+  ingest_url: http://localhost:8001
+  origin_lat: 34.077
+  origin_lon: -118.565
+  cell_size_m: 2.0
+  speed_mps: 0.2
+  interval_ms: 500
+  gps_noise_std: 0.00001
+  flush_interval: 1.0

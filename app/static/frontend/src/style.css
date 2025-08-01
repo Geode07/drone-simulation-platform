@@ -1,0 +1,73 @@
+/* Base layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #302c2c;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  margin-top: 16px;
+  font-size: 24px;
+  color: #2d2b2b;
+}
+
+/* Map container styling */
+#map-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Map itself */
+#map {
+  height: 700px;
+  width: 100%;
+  position: relative; /* to allow #controls absolute positioning */
+  border-radius: 8px;
+  /* overflow: hidden;*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls */
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.maplibregl-popup.fade-out {
+  opacity: 0 !important;
+  transition: opacity 0.8s ease-out;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

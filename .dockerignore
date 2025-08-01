@@ -1,0 +1,54 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment files
+.env
+
+# Node modules (for Vite)
+node_modules/
+static/frontend/node_modules/
+
+# Database volume or artifacts
+db_data/
+*.sqlite3
+
+# Python virtual environments
+.venv/
+venv/
+
+# Mac/Linux/Windows system files
+.DS_Store
+Thumbs.db
+
+# Docker-related
+*.log
+*.pid
+*.pid.lock
+*.db-journal
+docker-compose.override.yml
+__docker_build__/
+
+# Frontend build
+static/frontend/dist/
+static/frontend/.vite/
+
+# Testing
+htmlcov/
+.coverage
+.tox/
+.cache/
+.pytest_cache/
+
+# Data files
+*.parquet
+*.csv
+*.tsv
+*.jsonl
+
+# VSCode
+.vscode/
+# JetBrains
+.idea/

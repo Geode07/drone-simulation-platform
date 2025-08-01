@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Drone Mission Path Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="map-container">
+    <h1>Drone Mission Path Visualizer</h1>
+
+    <!-- Map with floating controls inside -->
+    <div id="map">
+      <div id="controls" style="display: block; text-align: center;">
+        <button id="play-btn" disabled>▶️ Play</button>
+        <button id="pause-btn" disabled>⏸️ Pause</button>
+        <button id="reset-btn" disabled>⏮️ Reset</button>
+      </div>
+    </div>
+
+    <!-- Optional loading spinner -->
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Loading map...</p>
+    </div>
+  </div>
+
+  <!-- Vite entry -->
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>
