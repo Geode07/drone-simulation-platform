@@ -1,10 +1,12 @@
-# Drone Trace & Mapping Platform
+# Drone Trip & Mapping Example
 
 This project mimics a drone performing visual inspection over a wildfire in a residential area. It generates, stores, and visualizes GPS traces for an autonomous drone using an two backend services, a timeseries database with geospatial capability, and interactive map. 
 
 To generate the digital elevation model (DEM), the opentopography api is used. The overpass api is used to generate the geospatial tile context and buildings. 
 
-In addition to a Vite frontend platform hosted on Flask, I used FastAPI for data streaming, and multiple python libraries for real-time geospatial processing. I also added my implementations of topography analytics, traveling salesman problem algorithm, and pathfinding algorithm for the drone flight planning task.
+In addition to a Vite frontend platform hosted on Flask, I used FastAPI for data streaming, and multiple python libraries for real-time geospatial processing. 
+
+I also added my implementations of traveling salesman problem (TSP) algorithm, and the A* and RRT pathfinding algorithms for the drone flight planning task.
 
 ![Screenshot](drone_mapping_screenshot.png)
 
