@@ -2,23 +2,6 @@ location:
   lat: 34.077
   lon: -118.565
 
-locations:
-  palisades:
-    lat: 34.077
-    lon: -118.565
-  palisades_lower: 
-    lat: 34.045327
-    lon: -118.523248
-  palisades_upper:
-    lat: 34.076330
-    lon: -118.561271
-  altadena: 
-    lat: 34.191309
-    lon: -118.131487
-  altadena_west: 
-    lat: 34.186750
-    lon: -118.156188
-
 dem:
   api_key: ${DEM_API_KEY}
   resolution: [100, 100]
